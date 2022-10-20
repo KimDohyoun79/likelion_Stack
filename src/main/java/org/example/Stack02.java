@@ -4,6 +4,7 @@ public class Stack02 {
 
     int[] arr;
     int top = -1;
+
     public Stack02() {
         arr = new int[10000];
     }
@@ -12,24 +13,28 @@ public class Stack02 {
         this.arr = new int[size];
     }
 
-    public int[] push(int value){
+    public int[] push(int value) {
         this.arr[++this.top] = value;
         return arr;
     }
 
-    public int pop(){
+    public int pop() {
         return this.arr[this.top--];
     }
 
-    public int[] getArr(){
+    public int[] getArr() {
         return this.arr;
     }
 
     public boolean isEmpty() {
-        if(top == -1)
+        if (top == -1)
             return true;
         else
             return false;
+    }
+
+    public int peek() {
+        return this.arr[top];
     }
 }
 
