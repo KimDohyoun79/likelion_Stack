@@ -5,7 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 class Stack02Test {
     Stack02 st = new Stack02();
@@ -30,5 +30,15 @@ class Stack02Test {
         assertEquals(20, st.pop());
         assertEquals(10, st.pop());
 
+    }
+
+    @Test
+    void isEnpty(){
+        Stack02 stt = new Stack02();
+        assertTrue(stt.isEmpty());
+        stt.push(10);
+        assertFalse(stt.isEmpty());
+        stt.pop();
+        assertTrue(stt.isEmpty());
     }
 }
