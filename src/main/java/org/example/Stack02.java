@@ -2,9 +2,10 @@ package org.example;
 
 public class Stack02 {
 
-    int[] arr = new int[10000];
+    int[] arr;
     int top = 0;
     public Stack02() {
+        arr = new int[10000];
     }
 
     public Stack02(int size) {
